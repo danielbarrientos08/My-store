@@ -18,7 +18,6 @@ function boomErrorHandler (err, req, res, next){
 
   if(Boom.isBoom(err)){
     const { output} = err
-
     return res.status(output.statusCode).json( output.payload)
   }
 
